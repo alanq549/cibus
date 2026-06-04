@@ -49,7 +49,7 @@ public class Reserva {
     @Builder.Default
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private EstadoReserva estado = EstadoReserva.PENDIENTE;
+    private EstadoReserva estado = EstadoReserva.CONFIRMADA;
 
     @Column(nullable = false)
     private LocalDateTime creadoEn;
