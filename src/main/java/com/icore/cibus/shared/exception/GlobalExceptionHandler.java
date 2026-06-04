@@ -14,20 +14,12 @@ import jakarta.servlet.http.HttpServletRequest;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(RecursoNoEncontradoException.class)
-    public ResponseEntity<ErrorResponse> manejarRecursoNoEncontrado(
-            RecursoNoEncontradoException exception,
+    @ExceptionHandler(EntidadNoEncontradaException.class)
+    public ResponseEntity<ErrorResponse> manejarEntidadNoEncontrada(
+            EntidadNoEncontradaException exception,
             HttpServletRequest request
     ) {
         return construirRespuesta(HttpStatus.NOT_FOUND, exception.getMessage(), request.getRequestURI(), null);
-    }
-
-    @ExceptionHandler(RecursoDuplicadoException.class)
-    public ResponseEntity<ErrorResponse> manejarRecursoDuplicado(
-            RecursoDuplicadoException exception,
-            HttpServletRequest request
-    ) {
-        return construirRespuesta(HttpStatus.CONFLICT, exception.getMessage(), request.getRequestURI(), null);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

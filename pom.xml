@@ -8,11 +8,11 @@
         <version>4.0.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.icore</groupId>
-    <artifactId>cibus</artifactId>
+    <groupId>com.I-core</groupId>
+    <artifactId>Cibus</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Cibus</name>
-    <description>Backend monolitico modular para gestion de restaurantes de I-Core</description>
+    <description>Cibus</description>
     <url/>
     <licenses>
         <license/>
@@ -57,11 +57,6 @@
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
