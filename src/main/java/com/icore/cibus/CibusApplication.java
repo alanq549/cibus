@@ -10,3 +10,4 @@ public class CibusApplication {
         SpringApplication.run(CibusApplication.class, args);
     }
 }
+
