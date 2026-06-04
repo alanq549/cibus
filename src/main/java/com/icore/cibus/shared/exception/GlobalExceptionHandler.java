@@ -22,6 +22,14 @@ public class GlobalExceptionHandler {
         return construirRespuesta(HttpStatus.NOT_FOUND, exception.getMessage(), request.getRequestURI(), null);
     }
 
+    @ExceptionHandler(ReglaNegocioException.class)
+    public ResponseEntity<ErrorResponse> manejarReglaNegocio(
+            ReglaNegocioException exception,
+            HttpServletRequest request
+    ) {
+        return construirRespuesta(HttpStatus.BAD_REQUEST, exception.getMessage(), request.getRequestURI(), null);
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> manejarValidaciones(
             MethodArgumentNotValidException exception,
